@@ -12,7 +12,7 @@ h2, lh {
 	padding-top: 16px;
 	padding-left: 16px;
 	font-size: 48px;
-	font-family: Times New Roman;
+	font-family: "Times New Roman";
 	height: 24px;
 	color: #40ff80;
 }
@@ -22,20 +22,18 @@ h2, lh {
 	color: #ff4040 !important;
 }
 
+/* Set the color of all highlights to yellow */
+.highlight {
+	color: yellow !important;
+}
+
 /* Align and resize the selected tab body */
 p {
 	padding-left: 16px;
 	padding-right: 16px;
 	padding-bottom: 16px;
 	font-size: 24px;
-	font-family: Arial;
-}
-
-/* Set the width and color of each tab's block */
-.tab {
-	margin-left: 96px;
-	margin-right: 96px;
-	background-color: #003673;
+	font-family: "Arial";
 }
 
 /* Make all titles float in the center, taking up at most 320 pixels of the screen's height */
@@ -63,17 +61,6 @@ a:visited {
 	color: magenta;
 }
 
-/* Change the color of button links to blue */
-.button a:link {
-	color: blue;
-	text-decoration: none;
-}
-
-.button a:visited {
-	color: blue;
-	text-decoration: none;	
-}
-
 /* Make the links become buttons */
 .button {
 	/* Image properties */
@@ -82,7 +69,7 @@ a:visited {
 	background-repeat: no-repeat;
 	background-size: 116px 40px;
 	padding: 10px 12px;
-	
+
 	/* Text properties */
 	color: purple;
 	text-decoration: none;
@@ -90,27 +77,21 @@ a:visited {
 	height: 24px;
 	width: 92px;
 	text-align: center;
-	font-family: Times New Roman;
-}
-
-/* Change the button and cursor images when it's hovered over */
-.button:hover {
-	cursor: pointer;
-	background-image: url("img/GraySquareButton.png");
+	font-family: "Times New Roman";
 }
 
 /* Change the style of lists */
-.list {
+ul.list {
 	list-style-type: none;
 	text-indent: -16px;
 	margin-top: -44px;
-	margin-bottom: -36px;
 	font-size: 24px;
-	font-family: Calibri;
+	font-family: "Calibri";
 }
-			
-/* Make all tab buttons inline with no bullets */
-li .button {
-	list-style-type: none;
-	display: inline;
+
+/* Set the width and color of each tab's block */
+.tab {
+	margin-left: 96px;
+	margin-right: 96px;
+	background-color: #003673;
 }

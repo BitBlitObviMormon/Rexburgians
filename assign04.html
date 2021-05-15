@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-  <head>    
+<html lang="en">
+  <head>
     <!-- Set the icon, style sheet, and title -->
     <link rel="icon" href="img/rexburgians_icon.png">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -10,16 +10,40 @@
       .list > li:before {
         content: "\2013\2002";
       }
+
+      /* Change the button and cursor images when it's hovered over */
+      .button:hover {
+        cursor: pointer;
+        background-image: url("img/GraySquareButton.png");
+      }
+
+      /* Change the color of button links to blue */
+      .button a:link {
+        color: blue;
+        text-decoration: none;
+      }
+
+      /* Make visited button links the same color as unvisited ones */
+      .button a:visited {
+        color: blue;
+        text-decoration: none;
+      }
+
+      /* Make all tab buttons inline with no bullets */
+      li .button {
+        list-style-type: none;
+        display: inline;
+      }
     </style>
   </head>
   <body>
     <!-- The Rexburgians title -->
     <div id="title">
-      <a href="rexburgians.html">
+      <a href="assign04.html">
         <img src="img/rexburgians_big.png" alt="Rexburgians Title">
       </a>
     </div>
-    
+
     <!-- List out all of the tabs and allow the user to click on them -->
     <ul class="navbar">
       <li class="button"><a href="javascript:void(0)" onclick="openTab('About')">About</a></li>
@@ -28,34 +52,33 @@
       <li class="button"><a href="https://github.com/BitBlitObviMormon/Rexburgians" target="_blank">GitHub</a></li>
       <li class="button"><a href="rational.html">Rational</a></li>
     </ul>
-    
+
     <!-- The About tab where the user can learn more about Rexburgians -->
     <div id="About" class="tab">
       <h2>About</h2>
       <p>
-        Rexburgians is an app that is designed to make planning dates easier,
+        <span class="highlight">Rexburgians</span> is an app that is designed to make planning dates easier,
         from searching good recipes for your date to planning where to go,
-        Rexburgians is the app just for you!
+        <span class="highlight">Rexburgians</span> is the app just for you!
+        <br><br>
+        <span class="highlight">Rexburgians</span> will be able do any of the following:
       </p>
+      <ul class="list">
+        <li>Search for, rate, and post your own dating ideas on our date ideas forum</li>
+        <li>Search for good places to take your date to</li>
+        <li>Check the weather to make sure you aren't picnicking in the rain</li>
+        <li>Pick a random recipe to try out something new on your date</li>
+        <li>Hang with your friends on our new hangout forum</li>
+        <li>Plan out your date by checking the BYUI Event Calendar</li>
+        <li>And much more!</li>
+      </ul>
       <p>
-        Rexburgians will be able do any of the following:
-        <ul class="list">
-          <li>Search for, rate, and post your own dating ideas on our date ideas forum</li>
-          <li>Search for good places to take your date to</li>
-          <li>Check the weather to make sure you aren't picnicking in the rain</li>
-          <li>Pick a random recipe to try out something new on your date</li>
-          <li>Hang with your friends on our new hangout forum</li>
-          <li>Plan out your date by checking the BYUI Event Calendar</li>
-          <li>And much more!</li>
-        </ul>
-      </p>
-      <p>
-        Rexburgians is still being made for the PC and Android tablet; to show your support
+        <span class="highlight">Rexburgians</span> is still being made for the PC and Android tablet; to show your support
         you can give us ideas or code on our
         <a href="https://github.com/BitBlitObviMormon/Rexburgians">GitHub</a> page.
       </p>
     </div>
-    
+
     <!-- The Test App tab where the user can test the Rexburgians app -->
     <div id="TestApp" class="tab">
       <h2>Test App</h2>
@@ -64,20 +87,20 @@
         <a href="app.html">here</a>.
         <br/>
         If you are interested in the development of the Android app
-        then you can check out our 
+        then you can check out our
         <a href="https://github.com/BitBlitObviMormon/Rexburgians">GitHub</a> page.
       </p>
     </div>
-    
+
     <!-- The Contact tab where the user can obtain employee contact info -->
     <div id="Contact" class="tab">
       <h2>Contact</h2>
       <p>
-        BitBlit ObviMormon (Lead Developer) &mdash; 
+        BitBlit ObviMormon (Lead Developer) &mdash;
         <a href="mailto:hen14020@byui.edu">hen14020@byui.edu</a>
       </p>
     </div>
-    
+
     <!-- The GitHub tab where the user can choose to browse the app's source code -->
     <div id="GitHub" class="tab">
       <h2>GitHub</h2>
@@ -97,7 +120,7 @@
       var i;
       var x = document.getElementsByClassName("tab");
       for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
+        x[i].style.display = "none";
       }
       document.getElementById(tabName).style.display = "block";
     }
